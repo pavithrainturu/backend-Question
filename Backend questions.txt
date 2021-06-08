@@ -1,0 +1,133 @@
+1.Default session data is stored in ASP.net:
+a.state server  2.session object  3.inprocess(ans)  4.all
+
+2.All asp.net web server controls have a ...............method that writes out the controls 
+markup that is sent to the
+a.render(ans)  b.load  c.savestatecomplete  d.init
+
+3.which of the following syntax is correct according to the custom error element.
+a.<customErrors mode="on" defaultRedirect="Eror.aspx"?></customErrors> (ans)
+b.<customErrors mode="off" defaultRedirect="Eror.aspx"?></customErrors> 
+c.<Errors mode="on" defaultRedirect="Eror.aspx"?></Errors> 
+d.none
+
+4.what is the correct setting in the web.config file if yoy want to configure your website fot out-of-process
+session state mamagement in asp.net state server.
+a.<sessionstate mode="stateserver" stateConnectionString=""sqlCommandTimeout=""/>
+b.<sessionstate mode="stateserver" stateNetworkString=""sqlConnectionstring=""/>
+c.<sessionstate mode="stateserver" stateConnectionString=""stateCommandTimeout="" allowCustomSqlDatabase="true"/>
+d.<sessionstate mode="stateserver" stateConnectionString=""stateNetworkTimeout=""/>(ans)
+
+5.which of the following is the default authentication mode for <authentication>element in web.config file.
+a.forms
+b.none
+c.windows(ans)
+d.passport
+
+6.which template must be provided in order to display data in a repeteter control?
+a.Alternate template
+b.data template
+c.item template(ans)
+d.row template
+
+7.if the AutoWireUp attribute of the @page directive is set to true,means
+a.page events are automatically bound to methods that use the naming conventions of page_event.(ans)
+b.all events will be assined automatically to the event handlers
+c.all page events will be generated automatically
+d.page event handlers should define with arguments.
+
+8.The ...........allows you to display data to anonymous and loggedin users
+a.loginView control(ans)
+b.loginStatus control
+c.login control
+d.loginname control
+
+9.txtonward---journeydate
+  txtreturn---return date               how to use compare validator
+
+10.which method is used to display data from xmldatasourse using repeteter control
+a.bind() and eval()(ans)
+b.xpath()
+c.bind()
+d.cannot display
+
+11.how to enable application level tracing?<trace enabled="true">
+*************************************************************************************
+the trace output should be displayed on the pages.
+=>only latest 10 traces requests to be stored on the server.
+=>trace statements to be stored by time when they have been generated.
+=>trace messages should be displayed on the local computer as well as remote computers.
+
+<trace enabled="true" requestlimit="10" pageoutput="true" tracemode="soryByTime" localonly="true"/>
+<trace enabled ="true" requestLimit="10" pageOutput="true" traceMode="ByTime" localOnly="false"/>                                                                     
+<trace enabled ="true" requestLimit="11" pageOutput="false" mostRecent="true" traceMode="SortByCategory" localOnly="true" />
+<trace enabled="true" requestlimit="10" pageoutput="true" mosrrecent="true" tracemode="soryBytime" localonly="false"/>(ans)                                                                
+
+12.An html control can be converted into server control using
+runat="server"
+13.how to apply themes dynamically from master pages to web pages?
+page preinit
+14.which object can help to maintain data across userd?
+a.application(ans)  b.session  c.response  d.server
+
+15.how to read connectionstring from the config file?
+configuration manager
+
+16.how to read the viewstate calculated value into label?
+a=(double)viewstate["count"];
+
+17.what is the method generated if we double click the dropdownlist?
+selectedindexChanged()
+
+18.difference between -sstype options "t" and "p"
+a.value is t then stored procedures for managing session are stored in tempdb database  and p is procedures for
+ managing sessions are stored in aspstate database(ans)
+b.it t session data loss from temp db and p is not lost from aspstate database sql is restarted
+c.if t session data is stored in custom and temp db and p is session data cant be stored in any database other than aspstate
+d.if p then session will save data in default
+
+19.how a web application accept the date and displays the day of week and month?
+a.create a derived custom control for achieving above scenario
+b.create full custom control
+c.create a web user control,drag, and drop (ans)
+d. function is already available
+
+20.suppose you created a data set object based on data in an xmlfile and stored
+ it in cacheobject as xml file changes the data should get reflected in grid view where data source is the mentioned data set
+how can be achieved?
+a.add the dataset to the cache with a cachedependecy object that makes the dataset dependent on the xml file 
+b.set the update cache property of dataset object to true
+c.add the datagrid  to the cache with a cachedependecy object that makes the dataset dependent on the xml file (ans)
+d.none
+
+21.how to display lable which is in master page to the content page label
+a.Label1.text=(label)(Master.FindControl("lb1")).text
+b.Label1.text=(label)Master.FindControl("lb1").text
+c.Label1.text=((label)Master.FindControl("lb1")).text(ans)
+d. you cannot acces master pade control from content
+
+
+22.to display a certain set of records from the database 
+a. create a sqldata datasource specify  the connection string(ans)
+b.create a objectdatasource by specify the datasource
+c.create an objectsource specify the select method 
+d. use an xml data source 
+
+23.how to capture all unhandled exceptions on the wedform through error event and display it on webform.
+a.
+protected void page_Error(object sender Eventargs e){
+Exception ex=Server.getLastError()
+if(ex.HttpUnhandledException)
+{
+lblResults.Text=ex.message;
+}
+Server.Clear();
+}
+***************
+a) protected void page_Error(object sender Eventargs e){
+lb1Results.Text=e.string
+e=null
+}
+b)protected void page_Error(object sender Eventargs e){
+lb1Results.Text=Server.GetLastError().ToString();Server.clear();
+}(ans)
